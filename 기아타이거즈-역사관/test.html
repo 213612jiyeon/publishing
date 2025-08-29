@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button data-img-src="img/img_1983_01.jpg">test</button>
+    <img src="" alt="">
+    <button data-img-src="img/img_1982_01.jpg">test</button>
+    <img src="" alt="">
+    <button data-img-src="img/3.jpg">test</button>
+    <img src="" alt="">
+    <button data-img-src="img/4.jpg">test</button>
+    <img src="" alt="">
+
+
+
+    <script>
+
+        const btn = document.querySelector('button');
+        const img = document.querySelector('img');
+
+        // data-img-src
+        // dataset.imgSrc
+
+        btn.addEventListener('click', function() {
+
+            let imgSource = btn.dataset.imgSrc
+
+            console.log(imgSource);
+
+            img.setAttribute('src', imgSource);
+
+        });
+
+    </script>
+</body>
+</html>
