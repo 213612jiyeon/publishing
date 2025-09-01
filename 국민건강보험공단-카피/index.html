@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국민건강보험공단</title>
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/var.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- 사이트 시작 -->
+    <div class="wrap">
+        <!-- header start -->
+        <header class="header">
+            <!-- 사이트 배너 -->
+            <div class="banner">
+                <!-- 컨텐츠에 대한 제목 -->
+                <!-- 화면에 노출되지 않더라도 제목을 표시 -->
+                <!-- 숨김처리(논리적마크업,웹접근성 규칙) -->
+                <h2 class="hide">사이트 알림</h2>
+                <div class="banner-top">
+                    <div class="content-box">
+                        <p class="nurizip-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p>
+                    </div>
+                </div>
+                <div class="banner-bottom">
+                    <div class="content-box">
+                        <!-- 창닫기(쿠키체크) -->
+                        <div class="close-check">
+                            <input type="checkbox" name="" id="closeCheck">
+                            <label for="closeCheck">오늘 하루 열지 않기</label>
+                        </div>
+                        <!-- 배너 슬라이드 컨트롤박스 -->
+                        <div class="banner-control">2</div>
+                    </div>
+                    <button class="btn-showhide">팝업 닫기</button>
+                </div>
+            </div>
+            <!-- header 로고/메뉴영역 -->
+            <div class="header-main">
+                <div class="content-box">
+                    <h1 class="site-logo" aria-label="국민건강보험"><a href="index.html"><img src="img/logo.png" alt="국민건강보험 로고"></a></h1>
+                    <div class="util-box1">
+                        <h2 class="hide">검색 및 회원메뉴</h2>
+                        <ul class="util-menu">
+                            <li><button class="util-item search">통합검색</button></li>
+                            <li><a href="" class="util-item join">회원가입</a></li>
+                            <li><a href="" class="util-item login">로그인</a></li>
+                        </ul>
+                        <!--
+                            검색및 회원가입 논리적 마크업 구현시
+                            
+                            검색버튼
+                            목록태그
+                                회원가입
+                                로그인
+                        -->
+                    </div>
+                    <div class="util-box2">
+                        <h2 class="hide">사이트 설정 메뉴</h2>
+                        <ul class="site-setting">
+                            <li class="setting-list suport-link"><button class="setting-item">지원</button>
+                                <ul class="setting-sub">
+                                    <li><a href="">이용안내</a></li>
+                                    <li><a href="">누리집안내지도</a></li>
+                                    <li><a href="">뷰어다운로드</a></li>
+                                </ul>
+                            </li>
+                            <li class="setting-list sound-toggle"><button class="setting-item">소리</button>
+                                <ul class="setting-sub">
+                                    <li><button>소리 확대</button></li>
+                                    <li><button>소리 축소</button></li>
+                                    <li><button>음성 켜기</button></li>
+                                </ul>
+                            </li>
+                            <li class="setting-list  screen-size"><button class="setting-item">화면크기</button>
+                                <ul class="setting-sub">
+                                    <li><button>화면 확대</button></li>
+                                    <li><button>화면 축소</button></li>
+                                </ul>
+                            </li>
+                            <li class="setting-list language-selector"><button class="setting-item">Language</button>
+                                <ul class="setting-sub">
+                                    <li><a href="">English</a></li>
+                                    <li><a href="">China</a></li>
+                                    <li><a href="">Japanese</a></li>
+                                    <li><a href="">Vietnam</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- header gnb -->
+            <nav class="header-nav">
+                <div class="content-box">
+                    <h2 class="hide">주요 서비스</h2>
+                    <ul class="gnb">
+                        <li><button>민원서비스</button>
+                            <div class="gnb-sub">
+                                <div class="content-box">
+                                    <ul class="gnb-depth2">
+                                        <li><button>서비스찾기</button></li>
+                                        <li><button>모의계산</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><button>건강모아</button>
+                            <div class="gnb-sub">
+                                <div class="content-box">
+                                    <ul class="gnb-depth2">
+                                        <li><button>나의 건강관리</button></li>
+                                        <li><button>가족 건강관리</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><button>정책·제도</button>
+                            <div class="gnb-sub">
+                                <div class="content-box">
+                                    <ul class="gnb-depth2">
+                                        <li><button>건강보험 제도안내</button></li>
+                                        <li><button>노인장기요양보험(새창)</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><button>정보공개</button>
+                            <div class="gnb-sub">
+                                <div class="content-box">
+                                    <ul class="gnb-depth2">
+                                        <li><button>정보공개제도</button></li>
+                                        <li><button>경영공시(새창)</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><button>국민소통·참여</button>
+                            <div class="gnb-sub">
+                                <div class="content-box">
+                                    <ul class="gnb-depth2">
+                                        <li><button>상담문의</button></li>
+                                        <li><button>국민참여</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><button>공단소개</button>
+                            <div class="gnb-sub">
+                                <div class="content-box">
+                                    <ul class="gnb-depth2">
+                                        <li><button>공단소개</button></li>
+                                        <li><button>조직안내</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- main start -->
+        <main class="main">
+            <!-- main section1 -->
+            <section class="sec sec1">
+                <div class="content-box">
+                    <p class="slogan"><em>국민건강보험</em>은 <em>소통</em>과 <em>배려</em>로<br><em>국민</em>과 <em>함께</em> 하겠습니다.</p>
+                    <div class="main-login">
+                        <h2 class="hide">로그인 서비스</h2>
+                        <p class="main-login-txt">로그인 하셔서<br>필요한 서비스 바로 확인하세요</p>
+                        <ul class="main-login-menu1">
+                            <li><a href="">개인로그인</a></li>
+                            <li><a href="">사업장로그인</a></li>
+                        </ul>
+                        <ul class="main-login-menu2">
+                            <li><a href="">올해 건강검진 대상자인가요?</a></li>
+                            <li><a href="">못 받으신 환급금이 있나요?</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- main section2 -->
+            <section class="sec sec2">
+                <div class="content-box">
+                    <div class="sec2-top">
+                        <h2 class="sec-tit">자주 찾는 서비스</h2>
+                        <ul class="service-menu">
+                            <li><button class="active">개인</button></li>
+                            <li><button>사업장</button></li>
+                        </ul>
+                    </div>
+                    <div class="sec2-main">
+                        <!-- 개인서비스 -->
+                        <ul class="service-cont personal">
+                            <li><a href="">자격득실<br>확인서</a></li>
+                            <li><a href="">자격득실<br>확인서</a></li>
+                            <li><a href="">자격득실<br>확인서</a></li>
+                            <li><a href="">자격득실<br>확인서</a></li>
+                            <li><a href="">자격득실<br>확인서</a></li>
+                            <li><a href="">자격득실<br>확인서</a></li>
+                            <li class="more"><a href="">더보기</a></li>
+                        </ul>
+                        <!-- 사업장서비스 -->
+                        <ul class="service-cont business">
+                            <li><a href="">사업장<br>직원조회</a></li>
+                            <li><a href="">사업장<br>직원조회</a></li>
+                            <li><a href="">사업장<br>직원조회</a></li>
+                            <li><a href="">사업장<br>직원조회</a></li>
+                            <li><a href="">사업장<br>직원조회</a></li>
+                            <li><a href="">사업장<br>직원조회</a></li>
+                            <li class="more"><a href="">더보기</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- main section3 -->
+            <section class="sec sec3">
+                <div class="content-box">
+                    <!-- 나를 위한 건강보험 제도 -->
+                    <div class="left-cont">
+                        <!-- 나를 위한 건강보험제도 -->
+                        <div class="my-insurance">
+                            <div class="my-insurance-top">
+                                <h2 class="my-tit">나를 위한 건강보험 제도</h2>
+                                <button class="my-btn">나에게 맞는 상황을 선택해주세요</button>
+                            </div>
+                            <!-- 슬라이드 박스시작 -->
+                            <div class="my-insurance-slide">
+                                <!-- swiper start -->
+                                <div class="swiper swiper-insurance">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="" class="slide-link">
+                                                <div class="slide-cont slide-cont1">
+                                                    <h3 class="insurance-sub-tit">직장보험료 보수총액 신고</h3>
+                                                    <p class="insurance-txt">으빠공이 단려굿으만흔 멍쥥에서 베아와 나애연으미. 전엑이 러퍼봴공썬을 누자로 스지, 탄은 둌아는 뺘일촬 잣하로 투린흘밀렴이안둔는 기드디의 덜소허를. 비디 슬제 분탱은 렟의어 트머혀와 나판 빠랅 댈란의 여킥는다.</p>
+                                                </div>
+                                                <div class="slide-cont slide-cont2">
+                                                    <em>온라인 이용 가능</em>
+                                                    <h3 class="sub-hover-tit">신청대상</h3>
+                                                    <p>지역가입자, 직장가입자, 피부양자</p>
+                                                    <h3 class="sub-hover-tit">분야</h3>
+                                                    <p>현물급여, 본인부담완화</p>
+                                                    <span class="more-detail">상세보기</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="" class="slide-link">
+                                                <div class="slide-cont slide-cont1">
+                                                    <h3 class="insurance-sub-tit">직장보험료 보수총액 신고</h3>
+                                                    <p class="insurance-txt">으빠공이 단려굿으만흔 멍쥥에서 베아와 나애연으미. 전엑이 러퍼봴공썬을 누자로 스지, 탄은 둌아는 뺘일촬 잣하로 투린흘밀렴이안둔는 기드디의 덜소허를. 비디 슬제 분탱은 렟의어 트머혀와 나판 빠랅 댈란의 여킥는다.</p>
+                                                </div>
+                                                <div class="slide-cont slide-cont2">
+                                                    <em>온라인 이용 가능</em>
+                                                    <h3 class="sub-hover-tit">신청대상</h3>
+                                                    <p>지역가입자, 직장가입자, 피부양자</p>
+                                                    <h3 class="sub-hover-tit">분야</h3>
+                                                    <p>현물급여, 본인부담완화</p>
+                                                    <span class="more-detail">상세보기</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="" class="slide-link">
+                                                <div class="slide-cont slide-cont1">
+                                                    <h3 class="insurance-sub-tit">직장보험료 보수총액 신고</h3>
+                                                    <p class="insurance-txt">으빠공이 단려굿으만흔 멍쥥에서 베아와 나애연으미. 전엑이 러퍼봴공썬을 누자로 스지, 탄은 둌아는 뺘일촬 잣하로 투린흘밀렴이안둔는 기드디의 덜소허를. 비디 슬제 분탱은 렟의어 트머혀와 나판 빠랅 댈란의 여킥는다.</p>
+                                                </div>
+                                                <div class="slide-cont slide-cont2">
+                                                    <em>온라인 이용 가능</em>
+                                                    <h3 class="sub-hover-tit">신청대상</h3>
+                                                    <p>지역가입자, 직장가입자, 피부양자</p>
+                                                    <h3 class="sub-hover-tit">분야</h3>
+                                                    <p>현물급여, 본인부담완화</p>
+                                                    <span class="more-detail">상세보기</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="" class="slide-link">
+                                                <div class="slide-cont slide-cont1">
+                                                    <h3 class="insurance-sub-tit">직장보험료 보수총액 신고</h3>
+                                                    <p class="insurance-txt">으빠공이 단려굿으만흔 멍쥥에서 베아와 나애연으미. 전엑이 러퍼봴공썬을 누자로 스지, 탄은 둌아는 뺘일촬 잣하로 투린흘밀렴이안둔는 기드디의 덜소허를. 비디 슬제 분탱은 렟의어 트머혀와 나판 빠랅 댈란의 여킥는다.</p>
+                                                </div>
+                                                <div class="slide-cont slide-cont2">
+                                                    <em>온라인 이용 가능</em>
+                                                    <h3 class="sub-hover-tit">신청대상</h3>
+                                                    <p>지역가입자, 직장가입자, 피부양자</p>
+                                                    <h3 class="sub-hover-tit">분야</h3>
+                                                    <p>현물급여, 본인부담완화</p>
+                                                    <span class="more-detail">상세보기</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="" class="slide-link">
+                                                <div class="slide-cont slide-cont1">
+                                                    <h3 class="insurance-sub-tit">직장보험료 보수총액 신고</h3>
+                                                    <p class="insurance-txt">으빠공이 단려굿으만흔 멍쥥에서 베아와 나애연으미. 전엑이 러퍼봴공썬을 누자로 스지, 탄은 둌아는 뺘일촬 잣하로 투린흘밀렴이안둔는 기드디의 덜소허를. 비디 슬제 분탱은 렟의어 트머혀와 나판 빠랅 댈란의 여킥는다.</p>
+                                                </div>
+                                                <div class="slide-cont slide-cont2">
+                                                    <em>온라인 이용 가능</em>
+                                                    <h3 class="sub-hover-tit">신청대상</h3>
+                                                    <p>지역가입자, 직장가입자, 피부양자</p>
+                                                    <h3 class="sub-hover-tit">분야</h3>
+                                                    <p>현물급여, 본인부담완화</p>
+                                                    <span class="more-detail">상세보기</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="" class="slide-link">
+                                                <div class="slide-cont slide-cont1">
+                                                    <h3 class="insurance-sub-tit">직장보험료 보수총액 신고</h3>
+                                                    <p class="insurance-txt">으빠공이 단려굿으만흔 멍쥥에서 베아와 나애연으미. 전엑이 러퍼봴공썬을 누자로 스지, 탄은 둌아는 뺘일촬 잣하로 투린흘밀렴이안둔는 기드디의 덜소허를. 비디 슬제 분탱은 렟의어 트머혀와 나판 빠랅 댈란의 여킥는다.</p>
+                                                </div>
+                                                <div class="slide-cont slide-cont2">
+                                                    <em>온라인 이용 가능</em>
+                                                    <h3 class="sub-hover-tit">신청대상</h3>
+                                                    <p>지역가입자, 직장가입자, 피부양자</p>
+                                                    <h3 class="sub-hover-tit">분야</h3>
+                                                    <p>현물급여, 본인부담완화</p>
+                                                    <span class="more-detail">상세보기</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>                                           
+                                </div>
+                                <!-- swiper end -->
+                            </div>
+                            <!-- 슬라이드 박스끝 -->
+                            
+                            <!-- 슬라이드 컨트롤 박스시작 -->
+                            <div class="swiper-slide-ctrl my-insurance-slide-ctrl">
+                                <div class="page-navi"></div>
+                                <button class="play"><span class="hide">실행</span></button>
+                                <button class="pause"><span class="hide">정지</span></button>
+                                <button class="prev"><span class="hide">이전보기</span></button>
+                                <button class="next"><span class="hide">다음보기</span></button>
+                                <a href="" class="more"><span class="hide">더보기</span></a>
+                            </div>
+                            <!-- 슬라이드 컨트롤 박스끝 -->
+                        </div>
+                        <!-- 나에게 맞는 상황을 선택해주세요 -->
+                    </div>
+                    <!-- 실시간검색어  -->
+                    <div class="right-cont">
+                        <h2 class="search-tit">인기 검색어</h2>
+                        <ol class="search-list">
+                            <li><a href=""><span>피부양자</span></a></li>
+                            <li><a href=""><span>피부양자</span></a></li>
+                            <li><a href=""><span>피부양자</span></a></li>
+                            <li><a href=""><span>피부양자</span></a></li>
+                            <li><a href=""><span>피부양자</span></a></li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+            <!-- main section4 국민소통참여 -->
+            <section class="sec sec4">
+                <div class="content-box">
+                    <div class="sec4-tit-box">
+                        <h2 class="sec4-tit">국민소통·참여</h2>
+                        <p>고객센터 1577-1000</p>
+                    </div>
+                    <ul class="sec4-list">
+                        <li><a href="">상담/문의</a></li>
+                        <li><a href="">국민제안</a></li>
+                        <li><a href="">칭찬해요/속상해요</a></li>
+                        <li><a href="">재정지킴이</a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- main section5 뉴스소식 -->
+            <section class="sec sec5">
+                <div class="content-box">
+                    <h2 class="sec-tit">뉴스·소식</h2>
+                    <div class="news-wrapper">
+                        <!-- 카드 뉴스 슬라이더 -->
+                        <div class="tab-news">
+                            <div class="tab-news-menu-wrapper">
+                                <ul class="tab-news-menu">
+                                    <li class="tab-news-menu-list">
+                                        <button class="tab-news-menu-btn active">공지사항</button>
+                                    </li>
+                                    <li class="tab-news-menu-list">
+                                        <button class="tab-news-menu-btn">보도자료</button>
+                                    </li>
+                                    <li class="tab-news-menu-list">
+                                        <button class="tab-news-menu-btn">입찰공고</button>
+                                    </li>
+                                    <li class="tab-news-menu-list">
+                                        <button class="tab-news-menu-btn">채용</button>
+                                    </li>
+                                </ul>
+                                <a href="" class="tab-news-more-link">더보기</a>
+                            </div>
+                            <!-- 뉴스컨텐츠 -->
+                            <div class="tab-news-cont-wrapper">
+                                <!-- 공지사항 컨텐츠 -->
+                                <ul class="tab-news-cont tab-news-notice">
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">「장애인보조기기 제품등록·평가 및 가격산정 등에 관한 사항」 공고 일부개정 안내</span>
+                                        <span class="tab-news-cont-date">2025.06.18</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">건강모아 5월 이벤트 당첨자 발표 「건강기록과 건강예측으로 맞춤형 건강관리 하세요!」</span>
+                                        <span class="tab-news-cont-date">2025.06.16</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">고객참여형 전화응대 만족도 조사 실시 안내</span>
+                                        <span class="tab-news-cont-date">2025.06.12</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">개인정보 목적 외 이용 및 제3자 제공 내역(2025.5.15.~2025.5.31.)</span>
+                                        <span class="tab-news-cont-date">2025.06.12</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">'비대면진료 시범사업 실시기관' 목록 일시중단 안내</span>
+                                        <span class="tab-news-cont-date">2025.06.11</span>
+                                    </li>
+                                </ul>
+                                <!-- 보도자료 컨텐츠 -->
+                                <ul class="tab-news-cont tab-news-press">
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">물품 제조·판매업체 대상, 국민건강보험공단 직원 사칭 주의 안내</span>
+                                        <span class="tab-news-cont-date">2025.06.18</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">국민건강보험공단, 인지도·이용자 향상을 위한 「2025 간호·간병통합서비스 브랜드 아이덴티티(BI) 공모전 시상식」 개최</span>
+                                        <span class="tab-news-cont-date">2025.06.18</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">의료영상검사(CT)에 이어 「유방촬영검사 이력조회」 서비스 확대 개시</span>
+                                        <span class="tab-news-cont-date">2025.06.17</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">“이제는 모바일 납부 시대”, 국민건강보험공단, 국민을 위한 디지털 혁신 추진</span>
+                                        <span class="tab-news-cont-date">2025.06.17</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">국민건강보험공단, 대한결핵 및 호흡기학외와 호흡기 질환의 질병 부담 연구를 위한 업무협약 체결
+                                        </span>
+                                        <span class="tab-news-cont-date">2025.06.16</span>
+                                    </li>
+                                </ul>
+                                <!-- 입찰공고 컨텐츠 -->
+                                <ul class="tab-news-cont tab-news-bid">
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">「장애인보조기기 제품등록·평가 및 가격산정 등에 관한 사항」 공고 일부개정 안내</span>
+                                        <span class="tab-news-cont-date">2025.06.18</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">건강모아 5월 이벤트 당첨자 발표 「건강기록과 건강예측으로 맞춤형 건강관리 하세요!」</span>
+                                        <span class="tab-news-cont-date">2025.06.16</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">고객참여형 전화응대 만족도 조사 실시 안내</span>
+                                        <span class="tab-news-cont-date">2025.06.12</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">개인정보 목적 외 이용 및 제3자 제공 내역(2025.5.15.~2025.5.31.)</span>
+                                        <span class="tab-news-cont-date">2025.06.12</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">'비대면진료 시범사업 실시기관' 목록 일시중단 안내</span>
+                                        <span class="tab-news-cont-date">2025.06.11</span>
+                                    </li>
+                                </ul>
+                                <!-- 채용 컨텐츠 -->
+                                <ul class="tab-news-cont tab-news-job">
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">「장애인보조기기 제품등록·평가 및 가격산정 등에 관한 사항」 공고 일부개정 안내</span>
+                                        <span class="tab-news-cont-date">2025.06.18</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">건강모아 5월 이벤트 당첨자 발표 「건강기록과 건강예측으로 맞춤형 건강관리 하세요!」</span>
+                                        <span class="tab-news-cont-date">2025.06.16</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">고객참여형 전화응대 만족도 조사 실시 안내</span>
+                                        <span class="tab-news-cont-date">2025.06.12</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">개인정보 목적 외 이용 및 제3자 제공 내역(2025.5.15.~2025.5.31.)</span>
+                                        <span class="tab-news-cont-date">2025.06.12</span>
+                                    </li>
+                                    <li class="tab-news-cont-list">
+                                        <span class="tab-news-cont-txt">'비대면진료 시범사업 실시기관' 목록 일시중단 안내</span>
+                                        <span class="tab-news-cont-date">2025.06.11</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 카드 뉴스 슬라이더 -->
+                        <div class="card-news">
+                            <!-- swiper-start -->
+                            <div class="swiper swiper-card-news">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href=""><img src="img/banner-01.png" alt=""></a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href=""><img src="img/banner-02.png" alt=""></a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href=""><img src="img/banner-03.png" alt=""></a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href=""><img src="img/banner-04.png" alt=""></a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href=""><img src="img/banner-05.png" alt=""></a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href=""><img src="img/banner-06.png" alt=""></a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href=""><img src="img/banner-07.png" alt=""></a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href=""><img src="img/banner-08.png" alt=""></a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href=""><img src="img/banner-09.png" alt=""></a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href=""><img src="img/banner-10.png" alt=""></a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href=""><img src="img/banner-11.png" alt=""></a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href=""><img src="img/banner-12.png" alt=""></a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href=""><img src="img/banner-13.png" alt=""></a>
+                                    </div>
+                                </div>
+                                <!-- wrapper End -->
+                                <div class="swiper-slide-ctrl card-news-ctrl">
+                                    <div class="page-navi"></div>
+                                    <button class="play"><span class="hide">실행</span></button>
+                                    <button class="pause"><span class="hide">정지</span></button>
+                                    <button class="prev"><span class="hide">이전보기</span></button>
+                                    <button class="next"><span class="hide">다음보기</span></button>
+                                    <a href="" class="more"><span class="hide">더보기</span></a>
+                                </div>
+                            </div>
+                            <!-- swiper-end -->
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- main section6 공단소개 -->
+            <section class="sec sec6">
+                <div class="content-box">
+                    <h2 class="sec-tit">공단소개</h2>
+                    <div class="sec6-top">
+                        <!-- 위치 및 조직도 -->
+                        <div class="left-cont">
+                            <div class="location-box">
+                                <h3 class="location-tit">위치 및 조직도</h3>
+                                <ul class="location">
+                                    <li class="location-list"><a href="" class="location-list-link">조직도·임원</a></li>
+                                    <li class="location-list"><a href="" class="location-list-link">지사찾기</a></li>
+                                    <li class="location-list"><a href="" class="location-list-link">외국인<br>민원센터</a></li>
+                                    <li class="location-list"><a href="" class="location-list-link">검진기관<br>찾기</a></li>
+                                    <li class="location-list"><a href="" class="location-list-link">병(의)원<br>찾기</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 공단소개-1 -->
+                        <div class="right-cont">
+                            <ul class="nh-intro">
+                                <li class="nh-intro-list"><a href="" class="intro-list-link">
+                                    <h3 class="intro-sub-tit">경영공시</h3>
+                                    <p class="intro-sub-txt">혹메는 주아기솔을 넷저지뵤는 도겨다 히밀까. 얼륵보숨은 사여구 차갓으는고 니바기라 레빈요역을 숀항의 우존은 쭉라궁고 느텰너벼가 우업에, 아뎃좬가모더. 파둥당배다 나쿌, 오어온의 온브각이는 아멌지 갈즈뷴너이를 하까밍아긴 줜데는 서농마, 견가왐 구솽어팃은.</p>
+                                    <span class="intro-sub-link">바로가기</span>
+                                </a></li>
+                                <li class="nh-intro-list"><a href="" class="intro-list-link">
+                                    <h3 class="intro-sub-tit">경영공시</h3>
+                                    <p class="intro-sub-txt">혹메는 주아기솔을 넷저지뵤는 도겨다 히밀까. 얼륵보숨은 사여구 차갓으는고 니바기라 레빈요역을 숀항의 우존은 쭉라궁고 느텰너벼가 우업에, 아뎃좬가모더. 파둥당배다 나쿌, 오어온의 온브각이는 아멌지 갈즈뷴너이를 하까밍아긴 줜데는 서농마, 견가왐 구솽어팃은.</p>
+                                    <span class="intro-sub-link">바로가기</span>
+                                </a></li>
+                                <li class="nh-intro-list"><a href="" class="intro-list-link">
+                                    <h3 class="intro-sub-tit">경영공시</h3>
+                                    <p class="intro-sub-txt">혹메는 주아기솔을 넷저지뵤는 도겨다 히밀까. 얼륵보숨은 사여구 차갓으는고 니바기라 레빈요역을 숀항의 우존은 쭉라궁고 느텰너벼가 우업에, 아뎃좬가모더. 파둥당배다 나쿌, 오어온의 온브각이는 아멌지 갈즈뷴너이를 하까밍아긴 줜데는 서농마, 견가왐 구솽어팃은.</p>
+                                    <span class="intro-sub-link">바로가기</span>
+                                </a></li>
+                                <li class="nh-intro-list"><a href="" class="intro-list-link">
+                                    <h3 class="intro-sub-tit">경영공시</h3>
+                                    <p class="intro-sub-txt">혹메는 주아기솔을 넷저지뵤는 도겨다 히밀까. 얼륵보숨은 사여구 차갓으는고 니바기라 레빈요역을 숀항의 우존은 쭉라궁고 느텰너벼가 우업에, 아뎃좬가모더. 파둥당배다 나쿌, 오어온의 온브각이는 아멌지 갈즈뷴너이를 하까밍아긴 줜데는 서농마, 견가왐 구솽어팃은.</p>
+                                    <span class="intro-sub-link">바로가기</span>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 이사장 인사말 -->
+                    <div class="sec6-main">
+                        <h3 class="ceo-intro-tit">안녕하십니까,<br>국민건강보험공단 이사장 정기석입니다.</h3>
+                        <p class="ceo-intro-txt">국민건강보험공단 홈페이지를 찾아주신 여러분, 진심으로 환영합니다.<br>‘건강한 국민, 건강한 삶’이 실현되고 제도가 지속가능할 수 있도록 ‘소통과 배려’로 국민 여러분과 함께 하면서 최선을 다하겠습니다.</p>
+                        <div class="ceo-page-link">
+                            <a href="" class="page-link1">인사말</a>
+                            <a href="" class="ceo-page-link2">인터뷰·메세지</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- main section7 건강보험공단SNS지금 -->
+            <section class="sec sec7">
+                <div class="content-box">
+                    <div class="sns-wrapper">
+                        <h2 class="sec-tit">건강보험공단 SNS지금!</h2>
+                        <div class="sns-box">
+                            <ul class="sns-list">
+                                <li class="sns-list-cont"><a href="" class="sns-link"><span class="sns-txt">유튜브</span></a></li>
+                                <li class="sns-list-cont"><a href="" class="sns-link"><span class="sns-txt">인스타그램</span></a></li>
+                                <li class="sns-list-cont"><a href="" class="sns-link"><span class="sns-txt">페이스북</span></a></li>
+                                <li class="sns-list-cont"><a href="" class="sns-link"><span class="sns-txt">블로그</span></a></li>
+                            </ul>
+                            
+                            <div class="sns-slide-box">
+                                <div class="sns-slide">
+                                    <div class="swiper swiper-sns">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <a href="" class="sns-youtube">
+                                                    <img src="img/banner-01.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="" class="sns-youtube">
+                                                    <!-- <img src="img/banner-02.png" alt=""> -->
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="" class="sns-youtube">
+                                                    <!-- <img src="img/banner-03.png" alt=""> -->
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="" class="sns-youtube">
+                                                    <!-- <img src="img/banner-04.png" alt=""> -->
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="prev"><span class="hide">이전보기</span></button>
+                                    <button class="next"><span class="hide">다음보기</span></button>
+                                    <div class="swiper-slide-ctrl sns-slide-ctrl">
+                                        <div class="page-navi"></div>
+                                        <button class="play"><span class="hide">실행</span></button>
+                                        <button class="pause"><span class="hide">정지</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="promotion-wrapper">
+                        <h2 class="sec-tit">홍보존</h2>
+                        <!-- 프로모션 슬라이드 박스 시작 -->
+                        <div class="promotion-slide">
+                            <div class="swiper swiper-promotion">
+                                <!-- wrapper-start -->
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <img src="img/promotion-01.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <img src="img/promotion-02.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- wrapper-end -->
+                                <div class="swiper-slide-ctrl promotion-ctrl">
+                                    <div class="page-navi"></div>
+                                    <button class="prev"><span class="hide">이전보기</span></button>
+                                    <button class="next"><span class="hide">다음보기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- footer start -->
+        <footer class="footer">
+            <!-- 패밀리 사이트 링크 -->
+            <div class="sitelink-wrapper">
+                <div class="content-box">
+                    <h2 class="hide">자매 사이트 가기</h2>
+                    <ul class="sitelink-menu">
+                        <li class="sitelink-list">
+                            <button class="sitelink-btn">분야별 업무사이트</button>
+                            <div class="sitelink-sub">
+                                <div class="content-box">
+                                    <h3 class="sitelink-sub-tit">분야별 업무사이트</h3>
+                                    <ul class="sitelink-sub-menu">
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="sitelink-close">닫기</button>
+                            </div>
+                        </li>
+                        <li class="sitelink-list">
+                            <button class="sitelink-btn">관련 사이트</button>
+                            <div class="sitelink-sub">
+                                <div class="content-box">
+                                    <h3 class="sitelink-sub-tit">관련 사이트</h3>
+                                    <ul class="sitelink-sub-menu">
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                        <li class="sitelink-sub-list">
+                                            <a href="" class="sitelink-sub-link">노인장기요양보험</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="sitelink-close">닫기</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 푸터 메인 -->
+            <div class="footer-main">
+                <div class="content-box">
+                    <section class="f-sec f-sec1">
+                        <div class="left">
+                            <address class="nhs-address">(26464) 강원특별자치도 원주시 건강로 32(반곡동) 국민건강보험공단</address>
+                            <p class="nhs-phone1"><em>대표전화 1577-1000</em> (유료, 평일 09시~18시)</p>
+                            <p class="nhs-phone2"><em>해외이용 +82-33-811-2001</em> (유료, 평일 09시~18시)</p>
+                        </div>
+                        <div class="right">
+                            <h2 class="userguide-tit">이용안내</h2>
+                            <ul class="userguide-menu">
+                                <li class="userguide-list">
+                                    <a href="" class="userguide-link">이용안내</a>
+                                </li>
+                                <li class="userguide-list">
+                                    <a href="" class="userguide-link">찾아오시는 길</a>
+                                </li>
+                            </ul>
+                            <ul class="sns-menu">
+                                <li class="sns-list">
+                                    <a href="" class="sns-link">
+                                        <span class="hide">네이버 블로그</span>
+                                    </a>
+                                </li>
+                                <li class="sns-list">
+                                    <a href="" class="sns-link">
+                                        <span class="hide">페이스북</span>
+                                    </a>
+                                </li>
+                                <li class="sns-list">
+                                    <a href="" class="sns-link">
+                                        <span class="hide">카카오 스토리</span>
+                                    </a>
+                                </li>
+                                <li class="sns-list">
+                                    <a href="" class="sns-link">
+                                        <span class="hide">유튜브</span>
+                                    </a>
+                                </li>
+                                <li class="sns-list">
+                                    <a href="" class="sns-link">
+                                        <span class="hide">인스타그램</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="f-sec f-sec2">
+                        <div class="left">
+                            <ul class="footer-link-list">
+                                <li class="footer-list"><a href="" class="footer-link">이용약관</a></li>
+                                <li class="footer-list"><a href="" class="footer-link">영상정보처리기기 운영방침</a></li>
+                                <li class="footer-list"><a href="" class="footer-link"><span>개인정보처리방침</span></a></li>
+                                <li class="footer-list"><a href="" class="footer-link">온라인도우미</a></li>
+                            </ul>
+                            <p>© National Health Insurance Service. All rights reserved.</p>
+                        </div>
+                        <div class="right">
+                            <ul class="footer-icon">
+                                <li><a href="" class="footer-mark"></a></li>
+                                <li><a href="" class="footer-mark"></a></li>
+                                <li><a href="" class="footer-mark"></a></li>
+                                <li><a href="" class="footer-mark"></a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="f-sec f-sec3">
+                        <div class="image"></div>
+                        <span class="footer-end">이 누리집은 보건복지부 산하기관 누리집입니다.</span>
+                    </section>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 사이트 끝 -->
+    <script src="js/swiper/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

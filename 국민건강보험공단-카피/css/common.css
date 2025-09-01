@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/* 박스크기 설정 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 마진,패딩초기화 */
+html,body,div,p,h1,h2,h3,h4,h5,h6,ol,ul,li,img,video,a,span,em,strong,form,input,button,select,option,textarea,label {
+    margin: 0;
+    padding: 0;
+}
+
+/* 리스트제거 */
+li {
+    list-style: none;
+}
+
+/* 타이포설정 */
+html {
+    font-family: 'p400';
+    font-size: 10px; /* REM기준사이즈 */
+    line-height: 1;
+    color:var(--grey1);
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size: inherit;
+    font-weight: normal;
+}
+em {
+    font-style: normal;
+}
+
+/* 링크스타일 */
+a {
+    text-decoration: none;
+    color:inherit;
+}
+/* 폼스타일 */
+input,button,select,textarea {
+    font:inherit;
+    color:inherit;
+    background: none;
+    border:none;
+    outline: none;
+}
+button {
+    cursor: pointer;
+}
+
+/* 접근성을 위한 숨김요소 */
+.hide {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0,0 0,0 0);
+}

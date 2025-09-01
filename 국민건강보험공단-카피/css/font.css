@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/* 
+    프린텐다드 폰트
+    Woff, Woff2설정
+    200 Extra Light  = p200
+    400 Regular = p400
+    700 Bold = p700
+    3개 설정
+*/
+
+@font-face {
+    font-family: 'p200';
+    src : url('../font/woff2/Pretendard-ExtraLight.woff2') format('woff2'),
+        url('../font/woff/Pretendard-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'p400';
+    src : url('../font/woff2/Pretendard-Regular.woff2') format('woff2'),
+        url('../font/woff/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'p700';
+    src : url('../font/woff2/Pretendard-Bold.woff2') format('woff2'),
+        url('../font/woff/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
