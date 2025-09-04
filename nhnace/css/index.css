@@ -52,7 +52,7 @@ button {
 }
 
 .content-wrap {
-    width: 158.4rem;
+    max-width: 158.4rem;
     margin: 0 auto;
 }
 
@@ -60,7 +60,7 @@ button {
 }
 
 .header-wrap {
-    height: 115.8rem;
+    height: auto;
     padding-top: 15rem;
 }
 
@@ -80,7 +80,7 @@ button {
 
     .header-inner {
         display: flex;
-        width: 158.4rem;
+        max-width: 158.4rem;
         margin: 0 auto;
         justify-content: space-between;
         line-height: 9rem;
@@ -195,14 +195,14 @@ button {
             display: flex;
             text-align: left;
             
-            &::after{
+            &::after {
                 content: "";
                 position: absolute;
                 right: -2.4rem;
                 top: .5rem;
                 transform: rotate(180deg);
                 width: 1rem; height: 1rem;
-                background: url(/img/language.png) no-repeat center / 100%;
+                background: url(/Portfolio/nhnace/img/language.png) no-repeat center / 100%;
                 transition: .3s;
             }
         }
@@ -247,7 +247,7 @@ button {
             display: block;
             width: 2.4rem;
             height: 2.4rem;
-            background-image: url(/img/menu.png);
+            background-image: url(/Portfolio/nhnace/img/menu.png);
             background-position: center;
             background-size: 100%;
         }
@@ -262,8 +262,10 @@ button {
 
 .main-box1 {
     background-color: #f2f3f5;
-    height: 104.7rem;
+    height: auto;
     overflow: hidden;
+    padding-bottom: 20rem;
+    margin-top: 5rem;
     
     .target-title {
         color: #111111;
@@ -274,19 +276,15 @@ button {
 
     .swiper-mainBox {
         width: 80%; /* 컨테이너 너비 조절 */
-        height: 400px;
+        height: auto;
         margin: 0 auto;
-    }
-
-    .swiper-mainBox {
-        width: 100%;
 
         .swiper-wrapper {
             .swiper-slide {
-                width: 104rem;
-                height: 40rem;
+                max-width: 104rem;
+                height: auto;
                 background-color: #fff;
-                border-radius: 10px;
+                border-radius: 5rem;
 
                 text-align: center;
                 font-size: 20px;
@@ -299,7 +297,7 @@ button {
                 align-items: center;
                 justify-content: center;
 
-                padding: 8.5rem;
+                padding: 8rem;
 
                 .swiper-title {
                     font-size: 3rem;
@@ -333,6 +331,16 @@ button {
                     background-color: #000;
                     color: #fff;
                     border-radius: .7rem;
+                    transition: .3s;
+
+                    &:hover {
+                        background-color: #ff2211;
+                        color: #fff;
+                    }
+
+                    &::after {
+                        content: "";
+                    }
                 }
             }
 
@@ -386,7 +394,7 @@ button {
 }
 
 .main-box2 {
-    height: 104.7rem;
+    height: auto;
 
     .main-title {
         padding-top: 14rem;
@@ -453,6 +461,18 @@ button {
     }
 }
 
+.main-box3 {
+    height: 104.7rem;
+    background-color: #7a7a7a;
+    
+    /* .main3-box {
+        width: 90vw;
+        height: 90vh;
+        margin: 0 auto;
+        background: url(/img/scale-img.png) center / 100%;
+    } */
+}
+
 .main-box4 {
     height: 104.7rem;
 
@@ -474,8 +494,9 @@ button {
         .swiper-wrapper {
             gap: 1.2rem;
         }
+        
         .swiper-slide {
-            width: 47.4rem;
+            width: fit-content;
             height: 58rem;
             border-radius: 5rem;
             overflow: hidden;
@@ -524,7 +545,6 @@ button {
         color: #999;
         text-align: center;
     }
-
     .partner1 {
         overflow: hidden;
         white-space: nowrap;
@@ -532,12 +552,7 @@ button {
         .partner-list1 {
             display: inline-block;
             gap: 3rem;
-
-            animation-name: ani-list;
-            animation-duration: 5s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            animation-direction: normal;
+            animation: scroll-left 15s linear infinite;
 
             li {
                 display: inline-block; /* 항목들을 가로로 나열 */
@@ -549,19 +564,41 @@ button {
                 margin-right: 3rem; /* 항목 간 간격 */
                 box-sizing: border-box; /* 패딩과 보더가 너비에 포함되도록 설정 */
             }
+            /* 무한 스크롤 효과를 위한 리스트 복제 */
+            &::after {
+                content: "";
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: 100%; /* 원본 리스트 바로 옆에 위치 */
+                width: 100%;
+                height: 100%;
+                background-color: transparent; /* 배경색은 필요에 따라 설정 */
+                /* 여기에 원본 리스트 아이템과 동일한 내용이 들어갈 수 있지만,
+                    간단한 예제에서는 복제된 리스트 아이템을 직접 넣는 대신
+                    CSS로 시뮬레이션합니다. 실제로는 JavaScript로 복제하는 경우가 더 흔합니다. */
+            }
         }
+    }
+    /* 애니메이션 정의 */
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(0); /* 시작 위치 */
+        }
+        100% {
+            transform: translateX(-50%); /* 전체 리스트 너비의 절반만큼 이동 */
+        }
+    }
+
+    /* 마우스 오버 시 애니메이션 멈춤 */
+    .partner-list1:hover {
+        animation-play-state: paused;
     }
 
     .partner-list2 {
         display: flex;
         gap: 3rem;
         width: 100%;
-        animation-name: ani-list; 
-        animation-duration: 20s;
-        animation-timing-function: linear;
-
-        animation-iteration-count: infinite;
-        /* animation-direction: reverse; */
 
         li {
             color: #000;
@@ -569,17 +606,6 @@ button {
             height: 10rem;
             background-color: #ffa733;
         }
-    }
-}
-
-@keyframes ani-list {
-    from {
-        transform: translateX(0); /* 시작 위치: 0 */
-    }
-    to {
-        /* 리스트 전체 너비의 50%만큼 이동 (반복적으로 보이기 위함) */
-        /* 8개 항목의 너비 + 7개 간격 */
-        transform: translateX(calc(-1 * (10rem * 8 + 3rem * 7)));
     }
 }
 
@@ -630,6 +656,7 @@ button {
 
             .input-wrap {
                 width: calc(100% / 2);
+                position: relative;
 
                 button {
                     width: 100%;
@@ -640,7 +667,7 @@ button {
                 }
             }
         }
-
+        
         input {
             height: 5.4rem;
             width: 100%;
@@ -650,12 +677,66 @@ button {
             border-radius: .5rem;
             padding-left: 1.5rem;
         }
-
+        
         .inquiry-box {
             height: 13.8rem;
         }
     }
 
+    .sortation-button {
+        height: 5.4rem;
+        width: 100%;
+        border: 1px solid #e8e8e8;
+        color: #7a7a7a;
+        font-size: 1.4rem;
+        border-radius: .5rem;
+        padding-left: 1.5rem;
+        text-align: left;
+        position: relative;
+
+        &::before {
+            content: "";
+            background-image: url(/Portfolio/nhnace/img/language.png);
+            background-repeat: no-repeat;
+            width: 1rem; height: 1rem;
+            position: absolute;
+            transform: rotate(-180deg);
+            left: calc(100% - 3rem);
+            top: calc(50% - .5rem);
+            transition: transform .2s ease-in-out;
+        }
+    }
+
+    .sortation-button.on {
+        &::before {
+            transform: rotate(0);        
+        }
+    }
+
+    .sortation {
+        outline: 1px solid #cccccc;
+        position: absolute;
+        width: 99%;
+        z-index: 999;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+
+        .sortation-list {
+            .sortation-content {
+                display: block;
+                background-color: #fff;
+                font-size: 1.4rem;
+                line-height: 5rem;
+                padding-left: 2rem;
+
+                &:hover {
+                    background-color: #f5f5f5;
+                }
+            }
+        }
+    }
+    
     .term {
         padding: 2rem;
         background-color: #fff;
@@ -701,7 +782,6 @@ button {
     }
 }
 
-
 .inner-header {
     position: relative;
 }
@@ -710,7 +790,7 @@ button {
     overflow: hidden;
 
     .swiper-slide {
-        width: 100%;
+        max-width: 100%;
         height: 590px;
         position: relative;
 
@@ -723,16 +803,17 @@ button {
     .page-box {
         position: absolute;
         bottom: 9rem;
-        right: 9rem;
-        background-color: #81ff33;
+        right: 16rem;
         z-index: 999;
 
         .header-pagination {
             font-size: 1.8rem;
             color: #fff;
+
             span {
                 font-size: 1.8rem;
                 color: #fff;
+                margin: 1rem;
             }
         }
     }
@@ -782,7 +863,7 @@ button {
     .header-prev {
         background-color: #f4f5f6;
         top: 1.6rem;
-        background-image: url(/img/NHN-PREV.png);
+        background-image: url(/Portfolio/nhnace/img/NHN-PREV.png);
         background-size: 80%;
         background-position: center;
         background-repeat: no-repeat;
@@ -791,7 +872,7 @@ button {
     .header-next {
         background-color: #000;
         bottom: 0;
-        background-image: url(/img/NHN-NEXT.png);
+        background-image: url(/Portfolio/nhnace/img/NHN-NEXT.png);
         background-size: 80%;
         background-position: center;
         background-repeat: no-repeat;
@@ -858,7 +939,7 @@ button {
             position: absolute;
             top: 50%; transform: translateY(-50%);
             margin-left: 1.8rem;
-            background: url(/img/link.png) no-repeat center / 100%;
+            background: url(/Portfolio/nhnace/img/link.png) no-repeat center / 100%;
         }
     }
 }
@@ -875,7 +956,7 @@ button {
             position: absolute;
             top: 50%; transform: translateY(-50%);
             margin-left: 1.8rem;
-            background: url(/img/download.png) no-repeat center / 100%;
+            background: url(/Portfolio/nhnace/img/download.png) no-repeat center / 100%;
         }
     }
 }
@@ -900,7 +981,7 @@ button {
     position: absolute;
     cursor: pointer;
     
-    background-image: url(/img/NHN-NEXT.png);
+    background-image: url(/Portfolio/nhnace/img/NHN-NEXT.png);
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
@@ -1045,7 +1126,7 @@ button {
                 content: "";
                 transition: .3s;
                 position: absolute;
-                background: url(/img/language.png) center / 100%;
+                background: url(/Portfolio/nhnace/img/language.png) center / 100%;
                 transform: translateY(-50%) rotate(-180deg);
                 width: .9rem;
                 height: .9rem;
@@ -1058,7 +1139,7 @@ button {
             &::before {
                 content: "";
                 position: absolute;
-                background: url(/img/language.png) center / 100%;
+                background: url(/Portfolio/nhnace/img/language.png) center / 100%;
                 transform: translateY(-50%);
                 width: .9rem;
                 height: .9rem;
@@ -1090,6 +1171,69 @@ button {
                     }
                 }
             }
+        }
+    }
+}
+
+@media (max-width:1500px) {
+
+    .contact-wrap {
+        display: flex;
+        flex-direction: column;
+
+        .contact-background {
+            padding: 10rem;
+        }
+
+        .input-form {
+            width: 100%;
+            padding: 2rem;
+        }
+    }
+
+    .footer-wrap {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+
+        .footer-right-box {
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .swiper-mainBox {
+        .swiper-slide {
+            flex-direction: column;
+            width: 50rem;
+            height: auto;
+        }
+
+        .swiper-slide-active {
+            opacity: 1;
+            transform: scale(1);
+        }
+    
+        .title-box {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .header-list-box {
+        flex-direction: column;
+    }
+
+    .list-menu {
+        width: 100%;
+    }
+
+    .main2-list {
+        
+        li {
+            width: 100%;
         }
     }
 }

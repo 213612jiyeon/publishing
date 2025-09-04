@@ -51,7 +51,7 @@ button {
     border-radius: 20px;
 
     .history-logo {
-        background-image: url(/img/KIA-logo.svg);
+        background-image: url(img/KIA-logo.svg);
         background-size: 100%;
         background-repeat: no-repeat;
         width: 75px; height: 55px;
@@ -176,7 +176,10 @@ button {
             height: 260px;
 
             img {
-                background-size: cover;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
             }
         }
 
@@ -265,7 +268,8 @@ button {
 
         li {
             a {
-                background-image: url(img/history-img.png);
+                /* background-image: url(img/history-img.png); */
+                background-image: url(img/history_1980.png);
                 width: 148px;
                 height: 227px;
                 display: block;
@@ -274,7 +278,7 @@ button {
                 .history-thumb {
                     width: 130px;
                     height: 180px;
-                    background-image: url(img/img_1982_01.jpg);
+                    background-position: center;
                     margin: 0 auto;
                     position: absolute;
                     left: calc(50% - 65px); top: 10px;
@@ -290,8 +294,17 @@ button {
                 }
             }
 
-            &:nth-child(2) .history-thumb {
-                background-image: url(img/img_1983_01.jpg);
+            &:nth-child(2) a {
+                background-image: url(img/history_1990.png);
+            }
+            &:nth-child(3) a {
+                background-image: url(img/history_2000.png);
+            }
+            &:nth-child(4) a {
+                background-image: url(img/history_2010.png);
+            }
+            &:nth-child(5) a {
+                background-image: url(img/history_2020.png);
             }
         }
     }
@@ -389,7 +402,6 @@ button {
 .table-box,
 .record-table {
     width: 835px;
-    background-color: #e4e4e4;
     font-size: 14px;
     text-align: center;
     border-spacing: 0; /*셀과 셀 사이 모든 여백이 제거됨*/

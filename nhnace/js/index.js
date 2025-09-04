@@ -29,6 +29,35 @@ const swiperHeader = new Swiper('.header-swiper', {
     pagination: {
         el: '.header-pagination',
         type: "fraction",
+        renderFraction: function (currentClass, totalClass) {
+            return `<span class="${currentClass}"></span> / <span class="${totalClass}"></span>`;
+        },
+            // 현재 슬라이드 번호를 두 자리로 만들어주는 함수
+        formatFractionCurrent: function (number) {
+            // 슬라이드 번호가 10보다 작으면 앞에 '0'을 붙여서 두 자리 숫자로 표시
+            return number < 10 ? '0' + number : number;  // 현재 슬라이드 숫자에 0 추가
+        },
+            // 총 슬라이드 숫자를 두 자리로 만들어주는 함수
+        formatFractionTotal: function (number) {
+            // 슬라이드 번호가 10보다 작으면 앞에 '0'을 붙여서 두 자리 숫자로 표시
+            return number < 10 ? '0' + number : number;  // 총 슬라이드 숫자에 0 추가
+        },
+    },
+    on: {
+        slideChangeTransitionStart: function () {
+            const progressBar = document.querySelector(".progress-bar");
+
+            progressBar.style.transition = "none";
+            progressBar.style.width = "0%";
+        },
+
+        slideChangeTransitionEnd: function () {
+            const progressBar = document.querySelector(".progress-bar");
+            const duration = 2500;
+
+            progressBar.style.transition = `${duration}ms`;
+            progressBar.style.width = "100%";
+        }
     }
 });
 
@@ -69,30 +98,19 @@ const language_select = document.querySelectorAll('.language-select');
 
 Language.forEach(function(el){
     el.addEventListener('click', function(event) {
-        // 이벤트매개변수.preventDefault()
-        // HTML 의 href값을 차단
         event.preventDefault();
 
-        // 버튼의 on클래스 유무체크후 sub show, hide
         if (el.classList.contains('on')) {
-            // 참(on이 있을때)
-            // on클래스 제거
             el.classList.remove('on');
-            // 자신의 서브박스가 보일때 숨기기
             el.nextElementSibling.style.display = 'none';
         } else {
-            // 거짓(on이 없을때)
-            // 다른요소에 on있는 경우 전체on을제거
             Language.forEach(function(e) {
                 e.classList.remove('on');
             });
-            // 다른서브박스가 보이는경우 전체서브박스를 hide
             language_setting.forEach(function(a) {
                 a.style.display = 'none';
             });
-            // 버튼 자기자신에게 on클래스 생성
             el.classList.add('on');
-            // 버튼의 동생인 서브박스 보이기
             el.nextElementSibling.style.display = 'block';
         }
     });
@@ -133,7 +151,6 @@ SiteBtn.forEach(function(element) {
     });
 });
 
-
 swiperMain.on('slideChangeTransitionEnd', function () {
     const activeIndex = swiperMain.realIndex;
 
@@ -142,53 +159,6 @@ swiperMain.on('slideChangeTransitionEnd', function () {
     });
 
     titleLinks[activeIndex].classList.add('active');
-});
-
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.set('.main2-list',{
-    y: '50%',
-    opacity: 0,
-});
-
-// 애니메이션 실행
-gsap.to('.main2-list1',{
-    y: 0,
-    opacity: 1,
-    ease: 'power3.inout',
-    
-    scrollTrigger: {
-        // markers: true,
-        trigger:'.main-box2',
-        start: "top 30%",
-        end: "top 50%",
-        scrub: 1,
-    }
-})
-
-gsap.to('.main2-list2',{
-    y: 0,
-    opacity: 1,
-    ease: 'power3.inout',
-    
-    scrollTrigger: {
-        // markers: true,
-        trigger:'.main-box2',
-        start: "top top",
-        end: "top 60%",
-        scrub: 1,
-    }
-});
-
-gsap.to(".scaleImg", {
-    width: "100%",
-    height: "200vh",
-    ease: "power1.out",
-    distance: 2,
-
-    scrollTrigger: {
-        trigger: ".main-box3",
-    }
 });
 
 const Menu = document.querySelectorAll('.menu');
@@ -210,3 +180,82 @@ Menu.forEach(item => {
         });
     });
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+    const inputWraps = document.querySelectorAll('.input-wrap');
+
+    inputWraps.forEach(function(input) {
+        const sortBtn = input.querySelector('.sortation-button');
+        const sortationList = input.querySelector('.sortation');
+        const sortCont = input.querySelectorAll(".sortation-content");
+        
+        sortBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            if (sortationList.style.display === 'block') {
+                sortationList.style.display = 'none';
+                sortBtn.classList.remove('on');
+            } else {
+                document.querySelectorAll('.sortation').forEach(list => {
+                    list.style.display = 'none';
+                    list.previousElementSibling.classList.remove('on');
+                });
+                
+                sortationList.style.display = 'block';
+                sortBtn.classList.add('on');
+            }
+        });
+
+        sortCont.forEach(function(btn) {
+            btn.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Remove 'on' class from all list items in this dropdown
+                sortCont.forEach(function(item) {
+                    item.classList.remove('on');
+                });
+
+                // Add 'on' class to the clicked item
+                btn.classList.add('on');
+
+                // Get the text for the button, prioritizing data-text
+                const btnText = btn.dataset.text || btn.textContent;
+                sortBtn.textContent = btnText;
+
+                // Close the dropdown list and remove the 'on' class from the button
+                sortationList.style.display = 'none';
+                sortBtn.classList.remove('on');
+            });
+        });
+
+        // Close dropdown when clicking outside the input-wrap
+        document.addEventListener('click', (event) => {
+            if (!input.contains(event.target)) {
+                sortationList.style.display = 'none';
+                sortBtn.classList.remove('on');
+            }
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const phoneInput = document.querySelector('.input-tel');
+
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function(event) {
+            let phoneNumber = event.target.value.replace(/[^0-9]/g, ''); // 숫자만 추출
+            let formattedNumber = '';
+
+            if (phoneNumber.length < 4) {
+                formattedNumber = phoneNumber;
+            } else if (phoneNumber.length < 7) {
+                formattedNumber = phoneNumber.substring(0, 3) + '-' + phoneNumber.substring(3);
+            } else if (phoneNumber.length < 11) {
+                formattedNumber = phoneNumber.substring(0, 3) + '-' + phoneNumber.substring(3, 6) + '-' + phoneNumber.substring(6);
+            } else {
+                formattedNumber = phoneNumber.substring(0, 3) + '-' + phoneNumber.substring(3, 7) + '-' + phoneNumber.substring(7, 11);
+            }
+            event.target.value = formattedNumber;
+        });
+    }
+});
